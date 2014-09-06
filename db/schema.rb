@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140904151237) do
+ActiveRecord::Schema.define(version: 20140906005601) do
 
   create_table "file_records", force: true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "offices", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,8 +38,10 @@ ActiveRecord::Schema.define(version: 20140904151237) do
     t.datetime "updated_at"
     t.integer  "record_id"
     t.integer  "person_id"
+    t.integer  "office_id"
   end
 
+  add_index "steps", ["office_id"], name: "index_steps_on_office_id"
   add_index "steps", ["person_id"], name: "index_steps_on_person_id"
   add_index "steps", ["record_id"], name: "index_steps_on_record_id"
 

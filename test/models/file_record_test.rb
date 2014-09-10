@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class FileRecordTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "complete file_record" do
+    assert file_records(:initial).completed?
+  end
+  
 end

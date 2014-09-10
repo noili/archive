@@ -1,11 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+emmet:
+  name: 'Dr Brown'
+  dni: 555555
+  email: 'emmet@mail.com'
 
-one:
-  name: MyString
-  dni: 1
-  email: MyString
-
-two:
-  name: MyString
-  dni: 1
-  email: MyString

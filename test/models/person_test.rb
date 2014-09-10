@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class PersonTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "complete person" do
+    assert people(:emmet).completed?
+  end
+  
 end

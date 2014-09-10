@@ -1,6 +1,9 @@
 archive
 =======
 
+[![Code Climate](https://codeclimate.com/github/noili/archivo/badges/gpa.svg)](https://codeclimate.com/github/noili/archivo)
+[![Test Coverage](https://codeclimate.com/github/noili/archivo/badges/coverage.svg)](https://codeclimate.com/github/noili/archivo)
+
 # Modelo
 
 FileRecord

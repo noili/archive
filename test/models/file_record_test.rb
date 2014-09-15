@@ -9,6 +9,6 @@ class FileRecordTest < ActiveSupport::TestCase
   
   test "when creating file record first step should be mesa de entrada" do
     file_record = FileRecord.create
-    assert file_record.steps.name == 'Mesa de Entrada'
+    assert file_record.steps.first.office.name == 'Mesa de Entrada'
   end
 end

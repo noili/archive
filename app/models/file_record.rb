@@ -6,7 +6,7 @@ class FileRecord < ActiveRecord::Base
   after_create :create_first_step
   
   def create_first_step
-    steps << Step.create
+    steps.build.first_step
   end
   
 end

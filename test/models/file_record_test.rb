@@ -11,4 +11,11 @@ class FileRecordTest < ActiveSupport::TestCase
     file_record = FileRecord.create
     assert file_record.steps.first.office.name == 'Mesa de Entrada'
   end
+  
+  test "when archivating file record last step should be archivate" do
+    file_record = FileRecord.create
+    file_record.archivate
+    assert file_record.steps.last.office.name == 'Archivo'
+  end
+  
 end

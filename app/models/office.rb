@@ -6,4 +6,8 @@ class Office < ActiveRecord::Base
     Office.find_or_create_by name: 'Mesa de Entrada'
   end
   
+  def self.archive_office
+    Office.find_or_create_by name: 'Archivo'
+  end
+  
 end

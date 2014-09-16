@@ -9,4 +9,9 @@ class Step < ActiveRecord::Base
     save
   end
   
+  def archivate
+    self.office = Office.archive_office
+    save
+  end
+  
 end

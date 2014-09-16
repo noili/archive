@@ -1,6 +1,9 @@
 class FileRecordsController < ApplicationController
 
-  def new
+  def archivate
+    @file_record = FileRecord.find(params[:file_record_id]).archivate
+    flash[:notice] = 'Archivated succesfully'
+    redirect_to file_records_path
   end
   
   def create

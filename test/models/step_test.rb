@@ -13,4 +13,17 @@ class StepTest < ActiveSupport::TestCase
     assert !step.valid?
   end
   
+  test "create step with email" do
+    office = offices :computo
+    person = people :emmet
+    step = Step.create office: office, email: person.email
+    assert step.person == person
+  end
+  
+  test "create step an person with email" do
+    office = offices :computo
+    step = Step.create office: office, email: 'inexistant@mail.com'
+    assert step.person.email == 'inexistant@mail.com'
+  end
+  
 end

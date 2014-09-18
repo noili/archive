@@ -4,7 +4,7 @@ class FileRecordsControllerTest < ActionController::TestCase
 
   test "create new file record" do
     post 'create', file_record:
-        {name: 'legal', email: 'asd@example.com', tags: ['publico', 'otro']}
+        {name: 'legal', email: 'asd@example.com'}
     assert_not_nil flash[:notice]
     assert_redirected_to FileRecord.last
   end
@@ -18,7 +18,7 @@ class FileRecordsControllerTest < ActionController::TestCase
   
   test "it should create a person with the email in step" do
     post 'create', file_record:
-        {name: 'legal', email: 'asd@example.com', tags: ['publico', 'otro']}
+        {name: 'legal', email: 'asd@example.com'}
     assert FileRecord.last.steps.last.person.email == 'asd@example.com'
   end
   

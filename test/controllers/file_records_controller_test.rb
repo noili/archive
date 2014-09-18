@@ -16,4 +16,10 @@ class FileRecordsControllerTest < ActionController::TestCase
     assert_redirected_to file_records_path
   end
   
+  test "it should create a person with the email in step" do
+    post 'create', file_record:
+        {name: 'legal', email: 'asd@example.com', tags: ['publico', 'otro']}
+    assert FileRecord.last.steps.last.person.email == 'asd@example.com'
+  end
+  
 end

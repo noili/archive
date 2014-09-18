@@ -10,7 +10,8 @@ class Step < ActiveRecord::Base
   
   before_create :save_person_by_email
   
-  def first_step
+  def first_step email
+    self.email = email
     self.office = Office.start_office
     save
   end

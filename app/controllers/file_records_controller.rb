@@ -7,7 +7,7 @@ class FileRecordsController < ApplicationController
   end
   
   def create
-    @file_record = FileRecord.new(params[:title])
+    @file_record = FileRecord.new(file_record_params)
     if @file_record.save
       flash[:notice] = 'Created succesfully'
       redirect_to @file_record
@@ -18,7 +18,7 @@ class FileRecordsController < ApplicationController
   
   private
   def file_record_params
-    params.require(:file_record).permit(:title)
+    params.require(:file_record).permit(:title, :email)
   end
   
 end

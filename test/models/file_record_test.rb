@@ -18,4 +18,9 @@ class FileRecordTest < ActiveSupport::TestCase
     assert file_record.steps.last.office == Office.archive_office
   end
   
+  test "it should create step with email" do
+    file_record = FileRecord.create email: 'some@email.com'
+    assert file_record.steps.last.person.email == 'some@email.com'
+  end
+  
 end

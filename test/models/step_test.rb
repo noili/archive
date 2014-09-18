@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class StepTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  test "create step with existant office" do
+    office = offices :computo
+    step = Step.create office: office
+    assert step.office.name == 'Computo'
+  end
+  
 end

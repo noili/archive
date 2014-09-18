@@ -38,4 +38,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'pry'
+gem "codeclimate-test-reporter", group: :test, require: nil
 

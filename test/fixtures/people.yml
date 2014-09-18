@@ -3,4 +3,7 @@ emmet:
   name: 'Dr Brown'
   dni: 555555
   email: 'emmet@mail.com'
+  
+incomplete:
+  email: 'incompleto@mail.com'
 

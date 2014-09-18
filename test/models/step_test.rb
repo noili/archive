@@ -8,4 +8,9 @@ class StepTest < ActiveSupport::TestCase
     assert step.office.name == 'Computo'
   end
   
+  test "create step with inexistant office" do
+    step = Step.new
+    assert !step.valid?
+  end
+  
 end

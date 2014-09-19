@@ -18,7 +18,7 @@ class FileRecordsController < ApplicationController
   
   private
   def file_record_params
-    params.require(:file_record).permit(:title, :email)
+    params.require(:file_record).permit(:title, :email, :tag_list)
   end
   
 end

@@ -12,6 +12,7 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
+/coverage
 /log/*.log
 /tmp
 /teps.last.office

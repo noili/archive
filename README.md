@@ -3,6 +3,7 @@ archive
 
 [![Code Climate](https://codeclimate.com/github/noili/archive/badges/gpa.svg)](https://codeclimate.com/github/noili/archive)
 [![Test Coverage](https://codeclimate.com/github/noili/archive/badges/coverage.svg)](https://codeclimate.com/github/noili/archive)
+[![Build Status](https://travis-ci.org/noili/archive.svg?branch=master)](https://travis-ci.org/noili/archive)
 
 # Modelo
 
@@ -79,5 +80,4 @@ post /file_records
   get /file_records
    
    {office: 'computos', ...}
-   
-un comit cualquiera
+

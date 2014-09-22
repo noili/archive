@@ -82,12 +82,16 @@ post /file_records
    {office: 'computos', ...}
    
 ###TODO
+
+0. ransack
    
 1. backend
   CRUD for file_record, office, step, ... from admin
+
+2. return jsons object
   
-2. authentication
+3. authentication
 
-3. devise (only admin that are users)
+4. devise (only admin that are users)
 
-4. doorkeeper
+5. doorkeeper

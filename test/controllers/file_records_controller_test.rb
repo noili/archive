@@ -28,4 +28,11 @@ class FileRecordsControllerTest < ActionController::TestCase
     assert FileRecord.last.tags.count == 2
   end
   
+  test "should render new when creating file record with wrong attributes" do
+    FileRecord.any_instance.stubs(:valid?).returns false
+    post 'create', file_record:
+        {email: 'asd@example.com'}
+    assert response.body == {status: 500}.to_json
+  end
+  
 end

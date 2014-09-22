@@ -12,7 +12,7 @@ class FileRecordsController < ApplicationController
       flash[:notice] = 'Created succesfully'
       redirect_to @file_record
     else
-      render :new
+      render json: {status: 500}.to_json
     end
   end
   

@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 gem 'pry'
 gem "codeclimate-test-reporter", group: :test, require: nil
 
+group :test do
+  gem 'mocha'
+end
+

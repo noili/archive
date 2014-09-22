@@ -80,4 +80,14 @@ post /file_records
   get /file_records
    
    {office: 'computos', ...}
+   
+###TODO
+   
+1. backend
+  CRUD for file_record, office, step, ... from admin
+  
+2. authentication
 
+3. devise (only admin that are users)
+
+4. doorkeeper

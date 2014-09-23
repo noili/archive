@@ -23,4 +23,9 @@ class FileRecordTest < ActiveSupport::TestCase
     assert file_record.steps.last.person.email == 'some@email.com'
   end
   
+  test "there should be an atribute in file record that poinst to last step" do
+    file_record = FileRecord.create
+    assert file_record.steps.last == file_record.step
+  end
+  
 end

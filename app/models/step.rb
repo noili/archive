@@ -9,6 +9,7 @@ class Step < ActiveRecord::Base
   validates :office, presence: true
   
   before_create :save_person_by_email
+  before_save :current_step
   
   def first_step email
     self.email = email
@@ -16,11 +17,15 @@ class Step < ActiveRecord::Base
     save
   end
   
+  def current_step
+    file_record.step = self
+  end
+  
   def archivate
     self.office = Office.archive_office
     save
   end
-  
+
   private
   
   def save_person_by_email

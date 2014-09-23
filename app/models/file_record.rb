@@ -1,5 +1,6 @@
 class FileRecord < ActiveRecord::Base
-
+  
+  belongs_to :step
   has_many :steps
   has_and_belongs_to_many :tags
 

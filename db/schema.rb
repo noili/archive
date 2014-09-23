@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910043714) do
+ActiveRecord::Schema.define(version: 20140923003857) do
 
   create_table "file_records", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "step_id"
   end
+
+  add_index "file_records", ["step_id"], name: "index_file_records_on_step_id"
 
   create_table "file_records_tags", id: false, force: true do |t|
     t.integer "file_record_id"

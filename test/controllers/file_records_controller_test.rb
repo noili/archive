@@ -3,7 +3,7 @@ require 'test_helper'
 class FileRecordsControllerTest < ActionController::TestCase
 
   test "create new file record" do
-    post 'create', file_record:
+    post :create, file_record:
         {title: 'legal', email: 'asd@example.com'}
     assert_redirected_to FileRecord.last
   end
@@ -15,22 +15,28 @@ class FileRecordsControllerTest < ActionController::TestCase
   end
   
   test "it should create a person with the email in step" do
-    post 'create', file_record:
+    post :create, file_record:
         {title: 'legal', email: 'asd@example.com'}
     assert FileRecord.last.steps.last.person.email == 'asd@example.com'
   end
   
   test "should create tags when creating file records" do
-    post 'create', file_record:
+    post :create, file_record:
         {title: 'legal', email: 'asd@example.com', tag_list: 'publico, otro'}
     assert FileRecord.last.tags.count == 2
   end
   
   test "should render new when creating file record with wrong attributes" do
     FileRecord.any_instance.stubs(:valid?).returns false
-    post 'create', file_record:
+    post :create, file_record:
         {email: 'asd@example.com'}
     assert response.body == {status: 500}.to_json
   end
+  
+  #test "shold return all file records that are currently in an office" do
+  #  get :index, file_record:
+  #      {q: {office_name_cont: 'Archivo'}}
+  #  assert response.body == []
+  #end
   
 end

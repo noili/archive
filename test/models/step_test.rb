@@ -11,7 +11,7 @@ class StepTest < ActiveSupport::TestCase
   end
     
   test "create step with existant office" do
-    step = Step.create office: office
+    step = Step.create office: office, file_record: file_records(:legal)
     assert step.office.name == 'Computo'
   end
   
@@ -21,12 +21,12 @@ class StepTest < ActiveSupport::TestCase
   end
   
   test "create step with email" do
-    step = Step.create office: office, email: person.email
+    step = Step.create office: office, email: person.email, file_record: file_records(:legal)
     assert step.person == person
   end
   
   test "create step an person with email" do
-    step = Step.create office: office, email: 'inexistant@mail.com'
+    step = Step.create office: office, email: 'inexistant@mail.com', file_record: file_records(:legal)
     assert step.person.email == 'inexistant@mail.com'
   end
   

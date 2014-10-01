@@ -84,6 +84,7 @@ post /file_records
 ###TODO
 
 0. ransack
+    (before ransack create attribute last step in file record)
    
 1. backend
   CRUD for file_record, office, step, ... from admin

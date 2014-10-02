@@ -2,5 +2,12 @@
 
 legal:
   title: 'legalizacion'
-
-
+  step: final
+  
+armas:
+  title: 'desarme'
+  step: final
+  
+inseguridad:
+  title: 'mucha'
+  step: otro

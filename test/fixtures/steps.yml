@@ -9,3 +9,8 @@
   #person: 'Alguien'
   #file_record: legal
 
+final:
+  office: archivo
+  
+otro:
+  office: computo

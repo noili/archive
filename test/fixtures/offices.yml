@@ -2,4 +2,7 @@
 
 computo:
   name: 'Computo'
+  
+archivo:
+  name: 'Archivo'
 

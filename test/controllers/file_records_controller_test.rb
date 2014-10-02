@@ -33,10 +33,10 @@ class FileRecordsControllerTest < ActionController::TestCase
     assert response.body == {status: 500}.to_json
   end
   
-  #test "shold return all file records that are currently in an office" do
-  #  get :index, file_record:
-  #      {q: {office_name_cont: 'Archivo'}}
-  #  assert response.body == []
-  #end
+  test "shold return all file records that are currently in an office" do
+    get :index, q: {step_office_name_cont: 'Archivo'}
+    body = JSON.parse response.body
+    assert body.count == 2
+  end
   
 end

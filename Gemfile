@@ -44,3 +44,5 @@ group :test do
   gem 'mocha'
 end
 
+gem 'ransack'
+

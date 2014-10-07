@@ -80,14 +80,9 @@ post /file_records
   get /file_records
    
    {office: 'computos', ...}
-   
+
 ###TODO
 
-0. ransack
-    (before ransack create attribute last step in file record)
-   
-1. backend
-  CRUD for file_record, office, step, ... from admin
 
 2. return jsons object
   
@@ -96,3 +91,11 @@ post /file_records
 4. devise (only admin that are users)
 
 5. doorkeeper
+
+###DONE
+
+0. ransack
+    (before ransack create attribute last step in file record)
+       
+1. backend
+  CRUD for file_record, office, step, ... from admin

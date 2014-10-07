@@ -45,4 +45,4 @@ group :test do
 end
 
 gem 'ransack'
-
+gem 'rails_backend', github: 'bluelemons/rails_backend'
